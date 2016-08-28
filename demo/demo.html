@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<!--
+   AddRemoveTextbox v1.0
+   https://www.github.com/kloverde/jquery-AddRemoveTextbox
+
+   Copyright (c) 2016 Kurtis LoVerde
+   All rights reserved
+
+   Donations:  https://paypal.me/KurtisLoVerde/5
+-->
+
+<html lang="en-US">
+   <head>
+      <meta charset="utf-8"/>
+
+      <title>AddRemoveTextbox Demo</title>
+
+      <link rel="stylesheet" href="css/demo.css"/>
+
+      <style type="text/css">
+         h3 {
+            margin-top: 35px;
+         }
+      </style>
+
+      <script
+         src="https://code.jquery.com/jquery-3.1.0.min.js"
+         integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+         crossorigin="anonymous"></script>
+
+      <script type="text/javascript" src="../jquery.addremovetextbox.js"></script>
+
+      <script type="text/javascript">
+         $( document ).ready( function() {
+            // Example 1
+
+            $( "#txt\\[0\\]" ).addRemoveTextbox( {
+               addButtonClass      : "addRemoveButton imgAdd",
+               addButtonTooltip    : "Add",
+               removeButtonClass   : "addRemoveButton imgRemove",
+               removeButtonTooltip : "Remove"
+            } );
+
+            // Example 2
+
+            $( "#number3" ).addRemoveTextbox( {
+               addButtonClass      : "addRemoveButton imgAdd",
+               addButtonTooltip    : "Add",
+               removeButtonClass   : "addRemoveButton imgRemove",
+               removeButtonTooltip : "Remove"
+            } );
+
+            // Example 3
+
+            $( "#color0" ).addRemoveTextbox( {
+               addButtonClass      : "addRemoveButton imgAdd",
+               addButtonTooltip    : "Add",
+               removeButtonClass   : "addRemoveButton imgRemove",
+               removeButtonTooltip : "Remove"
+            } );
+
+            // Example 4
+
+            $( "#stuff1" ).addRemoveTextbox( {
+               addButtonClass      : "addRemoveButton imgAdd",
+               addButtonTooltip    : "Add",
+               removeButtonClass   : "addRemoveButton imgRemove",
+               removeButtonTooltip : "Remove"
+            } );
+
+            // Example 5
+
+            $( "#maxFields1" ).addRemoveTextbox( {
+               addButtonClass    : "addRemoveButton imgAdd",
+               removeButtonClass : "addRemoveButton imgRemove",
+               maxFields         : 3
+            } );
+         } );
+      </script>
+   </head>
+
+   <body>
+      <p>
+         Notes:
+
+         <ol>
+            <li>You must have an Internet connection to use this demo, as jQuery is pulled from the jQuery CDN.</li>
+            <li>Depending on your browser's support for specialized input types, you might not see specialized behavior, and might see standard text boxes instead.  The ones featured here are known to work in Firefox 48 and Chrome 52.</li>
+         </ol>
+      </p>
+
+      <h3>Example 2 - ID array notation:  &lt;input type=&quot;text&quot; id=&quot;txt[0]&quot;&gt;</h3>
+
+      <div id="example1">
+         <div class="txtBoxRow">
+            <input type="text" id="txt[0]" name="txt[0]" class="addRemoveBox border1" maxlength="10"/>
+         </div>
+      </div>
+
+      <h3>Example 2 - ID number notation:  &lt;input type=&quot;number&quot; id=&quot;number3&quot;&gt;</h3>
+      <p>The ID starts on 3, so the next generated ID will be 4</p>
+
+      <div id="example2">
+         <div class="txtBoxRow">
+            <input type="number" id="number3" name="number3" class="addRemoveBox border1" min="1" max="7"/>
+         </div>
+      </div>
+
+      <h3>Example 3:  &lt;input type=&quot;color&quot; id=&quot;color0&quot;&gt;</h3>
+      <p>
+         If your browser supports it, you'll see a color picker here instead of a text field.
+         AddRemoveTextbox supports this type, too!
+      </p>
+
+      <div id="example3">
+         <div class="txtBoxRow">
+            <input type="color" id="color0" name="color0" class="addRemoveBox" value="#ff0000"/>
+         </div>
+      </div>
+
+      <h3>Example 4:  Pre-existing fields, IDs out of order and with gaps</h3>
+      <p>
+         In this example, a set of preexisting input fields are registered.  You don't need
+         to do anything differently to register the set:  simply invoke AddRemoveTextbox on
+         any ONE input field within the set.  It doesn't matter which one you use, nor does
+         it matter if the input fields are in chronological order in the page, nor does it
+         matter whether the IDs have gaps in their numbering.
+      </p>
+
+      <div id="example4">
+         <div class="txtBoxRow">
+            <input type="text" id="stuff0" name="lob0" value="Hello"/>
+         </div>
+
+         <div class="txtBoxRow">
+            <input type="text" id="stuff8" name="lob3" value="Konichiwa"/>
+         </div>
+
+         <div class="txtBoxRow">
+            <input type="text" id="stuff1" name="lob1" value="Bonjour"/>
+         </div>
+
+         <div class="txtBoxRow">
+            <input type="text" id="stuff3" name="lob2" value="Hola"/>
+         </div>
+      </div>
+
+      <h3>Example 5:  Setting a limit on how many fields can be generated</h3>
+      <p>
+         This is set to allow 3 fields.  You won't be able to add more after that,
+         but if you delete one of them, you'll be able to add one again.
+      </p>
+
+      <div id="example5">
+         <div class="txtBoxRow">
+            <input type="text" id="maxFields1" name="maxFields1"/>
+         </div>
+      </div>
+
+      <h2>Donations</h2>
+      <p>
+         I hope you found the code behind these examples helpful.  Please consider donating to this project to show your
+         support.  Your support is greatly appreciated, and it motivates me to keep this project alive and to release
+         more open source software.
+      </p>
+      <a href="https://paypal.me/KurtisLoVerde/5" target="new">https://paypal.me/KurtisLoVerde/5</a>
+   </body>
+</html>

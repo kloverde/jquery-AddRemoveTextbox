@@ -1,0 +1,51 @@
+/*
+ * AddRemoveTextbox v1.0
+ * https://www.github.com/kloverde/jquery-AddRemoveTextbox
+ *
+ *  This software is licensed under the 3-clause BSD license.
+ *
+ * Copyright (c) 2016 Kurtis LoVerde
+ * All rights reserved
+ *
+ * Donations:  https://paypal.me/KurtisLoVerde/5
+ */
+
+.txtBoxRow {
+   margin-bottom: 10px;
+}
+
+.txtBoxRow input {
+   vertical-align: middle;
+}
+
+.txtBoxRow input.border1 {
+   border: 1px solid orange;
+}
+
+.txtBoxRow .addRemoveButton {
+   display: inline-block;
+   width: 17px;
+   height: 17px;
+   margin-left: 5px;
+   vertical-align: middle;
+}
+
+.txtBoxRow .addRemoveButton:hover {
+   cursor: pointer;
+}
+
+.txtBoxRow .imgAdd {
+   background: url( '../img/add-inactive.png' );
+}
+
+.txtBoxRow .imgAdd:hover {
+   background: url( '../img/add-active.png' );
+}
+
+.txtBoxRow .imgRemove {
+   background: url( '../img/remove-inactive.png' );
+}
+
+.txtBoxRow .imgRemove:hover {
+   background: url( '../img/remove-active.png' );
+}
