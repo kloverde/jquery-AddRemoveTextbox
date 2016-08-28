@@ -42,7 +42,7 @@ You need to provide a container for all of the input fields.  Within that contai
 
 The plugin will duplicate the input field's immediate parent when creating a new field, so you should&apos;t define an ID attribute for the container.
 
-You should provide and `id` and `name` attribute for your field(s), and they should be the same value.
+You should provide an `id` and `name` attribute for your field(s), and they should be the same value.
 
 ```html
 
@@ -64,7 +64,7 @@ You should provide and `id` and `name` attribute for your field(s), and they sho
       } );
 
 ```
-AddRemoveTextbox also understands array notation, so you could use `id=&quot;txt[0]&quot;`.
+AddRemoveTextbox also understands array notation, so you could use `id=txt[0]`.
 
 You can also initialize AddRemoveTextbox on a large preexisting group of text boxes.
 
@@ -75,11 +75,11 @@ See the included HTML file for more in-depth examples.
 
 | Property | Description | Default Value |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |---------------|
-| `addButtonClass` | A CSS class to style the 'Add' button.  The generated HTML will be a &lt;&gt;, so it is assumed that you will use CSS to define a background image. | addButton |
+| `addButtonClass` | A CSS class to style the 'Add' button.  The generated HTML will be a &lt;span&gt;, so it is assumed that you will use CSS to define a background image. | addButton |
 | `addButtonTooltip` | Hover text for the 'Add' button | null |
-| `removeButtonClass` | A CSS class to style the 'Remove' button.  The generated HTML will be a &lt;&gt;, so it is assumed that you will use CSS to define background image. | removeButton |
+| `removeButtonClass` | A CSS class to style the 'Remove' button.  The generated HTML will be a &lt;span&gt;, so it is assumed that you will use CSS to define background image. | removeButton |
 | `removeButtonTooltip` | Hover text for the 'Remove' button | null |
-| `maxFields` | A optional limit on the number of fields which may exist under the applicable ID prefix.  If a value is specified, it must be an integer greater than 1. | null (no limit) |
+| `maxFields` | An optional limit on the number of fields which may exist under the applicable ID prefix.  If a value is specified, it must be an integer greater than 1. | null (no limit) |
 
 
 ## Thanks
