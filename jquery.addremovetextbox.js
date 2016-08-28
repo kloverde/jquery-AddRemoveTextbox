@@ -15,7 +15,7 @@
 
    $.fn.addRemoveTextbox = function( options ) {
 
-	   var settings = $.extend( {
+      var settings = $.extend( {
          // A CSS class to style the 'Add' button.  The generated HTML will be a <span>, so it is
          // assumed that you will use CSS to define a background image.
          addButtonClass      : "addButton",
@@ -95,10 +95,6 @@
          if( title != null ) {
             btn.prop( "title", title );
          }
-
-         btn.on( "click", function() {
-            
-         } );
 
          return btn;
       }
