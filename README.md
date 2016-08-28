@@ -44,7 +44,7 @@ The plugin will duplicate the input field's immediate parent when creating a new
 
 You should provide and `id` and `name` attribute for your field(s), and they should be the same value.
 
-      ```html
+```html
 
       <div id="myTextBoxes">
          <div class="txtBoxRow">
@@ -52,9 +52,9 @@ You should provide and `id` and `name` attribute for your field(s), and they sho
          </div>
       </div>
 
-      ```
+```
 
-      ```javascript
+```javascript
 
       $( "#txt0" ).addRemoveTextbox( {
          addButtonClass      : "addRemoveButton imgAdd",
@@ -63,7 +63,7 @@ You should provide and `id` and `name` attribute for your field(s), and they sho
          removeButtonTooltip : "Remove"
       } );
 
-      ```
+```
 AddRemoveTextbox also understands array notation, so you could use `id=&quot;txt[0]&quot;`.
 
 You can also initialize AddRemoveTextbox on a large preexisting group of text boxes.
