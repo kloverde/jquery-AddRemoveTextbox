@@ -1,5 +1,5 @@
-AddRemoveTextbox v1.1
-=====================
+AddRemoveTextbox v1.1.1
+=======================
 
 See LICENSE for this software's licensing terms.
 
