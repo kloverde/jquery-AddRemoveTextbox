@@ -1,5 +1,5 @@
-AddRemoveTextbox v1.0
-=====================
+AddRemoveTextbox v1.1.1
+=======================
 
 See LICENSE for this software's licensing terms.
 
@@ -12,6 +12,7 @@ AddRemoveTextbox is a jQuery plugin which provides for dynamic creation and remo
 * Configurable CSS classes for the 'add' and 'remove' buttons
 * Configurable tooltips for the 'add' and 'remove' buttons
 * Configurable limit on the number of input fields
+* Able to renumber id and name attributes to keep them contiguous (enabled through a configuration option)
 
 
 ## jQuery Compatibility
@@ -80,6 +81,8 @@ See the included HTML file for more in-depth examples.
 | `removeButtonClass` | A CSS class to style the 'Remove' button.  The generated HTML will be a &lt;span&gt;, so it is assumed that you will use CSS to define background image. | removeButton |
 | `removeButtonTooltip` | Hover text for the 'Remove' button | null |
 | `maxFields` | An optional limit on the number of fields which may exist under the applicable ID prefix.  If a value is specified, it must be an integer greater than 1. | null (no limit) |
+| `contiguous` | If `true`, renumber the `id` and `name` attributes upon initialization and when a row is removed.  Renumbering is based on DOM order, not `id` or `name` values, and starts on the value specified by `startingNumber`.  This setting is disabled by default because it can break applications. | false |
+| `startingNumber` | This setting is used only when `contiguous` is set to `true`. | null |
 
 
 ## Thanks

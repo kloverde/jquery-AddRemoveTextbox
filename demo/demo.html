@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 
 <!--
-   AddRemoveTextbox v1.0
+   AddRemoveTextbox v1.1.1
    https://www.github.com/kloverde/jquery-AddRemoveTextbox
-
-   Copyright (c) 2016 Kurtis LoVerde
-   All rights reserved
-
+  
    Donations:  https://paypal.me/KurtisLoVerde/5
+  
+   Copyright (c) 2016, Kurtis LoVerde
+   All rights reserved.
+  
+   Redistribution and use in source and binary forms, with or without
+   modification, are permitted provided that the following conditions are met:
+  
+      1. Redistributions of source code must retain the above copyright
+         notice, this list of conditions and the following disclaimer.
+      2. Redistributions in binary form must reproduce the above copyright
+         notice, this list of conditions and the following disclaimer in the
+         documentation and/or other materials provided with the distribution.
+      3. Neither the name of the copyright holder nor the names of its
+         contributors may be used to endorse or promote products derived from
+         this software without specific prior written permission.
+  
+   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+   ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+   WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+   DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+   FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+   DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+   SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+   CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+   OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
 <html lang="en-US">
@@ -62,7 +85,7 @@
 
             // Example 4
 
-            $( "#stuff1" ).addRemoveTextbox( {
+            $( "#stuff8" ).addRemoveTextbox( {
                addButtonClass      : "addRemoveButton imgAdd",
                addButtonTooltip    : "Add",
                removeButtonClass   : "addRemoveButton imgRemove",
@@ -70,6 +93,16 @@
             } );
 
             // Example 5
+
+            $( "#renumber4" ).addRemoveTextbox( {
+               addButtonClass      : "addRemoveButton imgAdd",
+               addButtonTooltip    : "Add",
+               removeButtonClass   : "addRemoveButton imgRemove",
+               removeButtonTooltip : "Remove",
+               contiguous          : true
+            } );
+
+            // Example 6
 
             $( "#maxFields1" ).addRemoveTextbox( {
                addButtonClass    : "addRemoveButton imgAdd",
@@ -146,13 +179,40 @@
          </div>
       </div>
 
-      <h3>Example 5:  Setting a limit on how many fields can be generated</h3>
+      <h3>Example 5 - Renumbering:  Pre-existing fields, IDs out of order and with gaps</h3>
+      <p>
+         These fields' IDs and names remain contiguous.  Compare what the code says to what
+         your favorite DOM inspector says.  This functionality is disabled by default
+         because it can break applications.  Be sure that your application can handle
+         changing IDs and names before using this.
+      </p>
+
+      <div id="example5">
+         <div class="txtBoxRow">
+            <input type="text" id="renumber3" name="renumber3" value="Hello"/>
+         </div>
+
+         <div class="txtBoxRow">
+            <input type="text" id="renumber8" name="renumber8" value="Konichiwa"/>
+         </div>
+
+         <div class="txtBoxRow">
+            <input type="text" id="renumber6" name="renumber6" value="Bonjour"/>
+         </div>
+
+         <div class="txtBoxRow">
+            <input type="text" id="renumber4" name="renumber4" value="Hola"/>
+         </div>
+      </div>
+
+
+      <h3>Example 6:  Setting a limit on how many fields can be generated</h3>
       <p>
          This is set to allow 3 fields.  You won't be able to add more after that,
          but if you delete one of them, you'll be able to add one again.
       </p>
 
-      <div id="example5">
+      <div id="example6">
          <div class="txtBoxRow">
             <input type="text" id="maxFields1" name="maxFields1"/>
          </div>
