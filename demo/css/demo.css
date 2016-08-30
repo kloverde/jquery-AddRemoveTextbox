@@ -1,5 +1,5 @@
 /*
- * AddRemoveTextbox v1.1.1
+ * AddRemoveTextbox v1.1.2
  * https://www.github.com/kloverde/jquery-AddRemoveTextbox
  *
  * Donations:  https://paypal.me/KurtisLoVerde/5
