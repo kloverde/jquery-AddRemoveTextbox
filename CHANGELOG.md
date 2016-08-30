@@ -1,5 +1,6 @@
 ## Release 1.1.2 (August 29, 2016)
 
+* Changed an occurrence of prop() to attr() - no functional impact, but made for the sake of correctness
 * Refinements to demo.html
 
 

@@ -141,7 +141,7 @@
          }
 
          if( title != null ) {
-            btn.prop( "title", title );
+            btn.attr( "title", title );
          }
 
          return btn;
