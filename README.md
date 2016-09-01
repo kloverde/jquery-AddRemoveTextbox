@@ -12,6 +12,7 @@ AddRemoveTextbox is a jQuery plugin which provides for dynamic creation and remo
 * Configurable CSS classes for the 'add' and 'remove' buttons
 * Configurable tooltips for the 'add' and 'remove' buttons
 * Configurable limit on the number of input fields
+* Configurable callbacks for add and remove operations
 * Able to renumber id and name attributes to keep them contiguous (enabled through a configuration option)
 
 

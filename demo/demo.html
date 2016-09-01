@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--
-   AddRemoveTextbox v1.1.2
+   AddRemoveTextbox v1.2
    https://www.github.com/kloverde/jquery-AddRemoveTextbox
   
    Donations:  https://paypal.me/KurtisLoVerde/5
@@ -55,6 +55,14 @@
       <script type="text/javascript" src="../jquery.addremovetextbox.js"></script>
 
       <script type="text/javascript">
+         function callbackDemoAdd( id, name ) {
+            alert( "Added field with id = " + id + ", name = " + name );
+         }
+
+         function callbackDemoRemove( id, name, val ) {
+            alert( "Field '" + id + "' was removed.  Its value was '" + val + "'" );
+         }
+
          $( document ).ready( function() {
             // Example 1
 
@@ -108,6 +116,15 @@
                addButtonClass    : "addRemoveButton imgAdd",
                removeButtonClass : "addRemoveButton imgRemove",
                maxFields         : 3
+            } );
+
+            // Example 7
+
+            $( "#callbackDemo1" ).addRemoveTextbox( {
+               addButtonClass    : "addRemoveButton imgAdd",
+               removeButtonClass : "addRemoveButton imgRemove",
+               addCallback       : callbackDemoAdd,
+               removeCallback    : callbackDemoRemove
             } );
          } );
       </script>
@@ -215,6 +232,22 @@
       <div id="example6">
          <div class="txtBoxRow">
             <input type="text" id="maxFields1" name="maxFields1"/>
+         </div>
+      </div>
+
+      <h3>Example 7:  Callbacks</h3>
+      <p>
+         This example defines a callback that gets triggered when a field is added.
+         The callback then adds a blur callback to watch it for changes.  Try it: 
+         add a field, type a value into it, then click outside the field.
+      </p>
+      <p>
+         This example also defines a callback that gets triggered when a field is
+         removed.  Remove a field and see what happens.
+      </p>
+      <div id="example7">
+         <div class="txtBoxRow">
+            <input type="text" id="callbackDemo1"/>
          </div>
       </div>
 
