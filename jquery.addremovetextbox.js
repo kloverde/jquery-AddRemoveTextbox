@@ -1,5 +1,5 @@
 /*
- * AddRemoveTextbox v1.1.2
+ * AddRemoveTextbox v1.2
  * https://www.github.com/kloverde/jquery-AddRemoveTextbox
  *
  * Donations:  https://paypal.me/KurtisLoVerde/5
@@ -62,8 +62,23 @@
          contiguous          : false,
 
          // This setting is used only when 'contiguous' is set to true.
-         startingNumber      : 0
+         startingNumber      : 0,
+
+         // A callback function for add operations.  Your callback must accept two string arguments:
+         // arg1:  the id attribute of the added row
+         // arg2:  the name attribute of the added row
+         addCallback         : null,
+
+         // A callback function for remove operations.  Your callback must accept three string arguments:
+         // arg1:  the id attribute of the removed row
+         // arg2:  the name attribute of the removed row
+         // arg3:  the value of the removed row
+         removeCallback      : null
       }, options );
+
+      if( this.length === 0 || this == null ) {
+         throwException( "No matching field(s) found" );
+      }
 
       var ID_PREFIX = this.attr( "id" ).replace( /\[?[0-9]*\]?$/, "" );
       var IS_NUMBERED_NOTATION = this.attr( "id" ).match( /[0-9]+$/ ) != null;
@@ -213,6 +228,10 @@
 
          newRow.insertAfter( lastRow );
 
+         if( typeof settings.addCallback === "function" ) {
+            settings.addCallback( nextIdResults.nextId, nextIdResults.nextId );
+         }
+
          return nextIdResults.nextId;
       }
 
@@ -239,7 +258,10 @@
       function removeRow( button ) {
          var rowToRemove = button.parent();
          var prevRow = rowToRemove.prev();
-         var inputId = rowToRemove.children( "input" ).attr( "id" );
+         var inputToRemove = rowToRemove.children( "input" );
+         var inputToRemoveVal = inputToRemove.val();
+         var inputId = inputToRemove.attr( "id" );
+         var inputName = inputToRemove.attr( "name" );
 
          // Don't remove the row if it's the only/last one in the group.
 
@@ -264,7 +286,11 @@
             rowToRemove.remove();
             rebuild();
          } else {
-            $( escape("#" + inputId) ).val( "" );
+            inputToRemove.val( "" );
+         }
+
+         if( typeof settings.removeCallback === "function" ) {
+            settings.removeCallback( inputId, inputName, inputToRemoveVal );
          }
       }
 
