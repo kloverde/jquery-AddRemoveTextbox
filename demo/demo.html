@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
 <!--
-   AddRemoveTextbox v1.2
+   AddRemoveTextbox v1.2.1
    https://www.github.com/kloverde/jquery-AddRemoveTextbox
-  
+
    Donations:  https://paypal.me/KurtisLoVerde/5
-  
+
    Copyright (c) 2016, Kurtis LoVerde
    All rights reserved.
-  
+
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are met:
   
@@ -20,7 +20,7 @@
       3. Neither the name of the copyright holder nor the names of its
          contributors may be used to endorse or promote products derived from
          this software without specific prior written permission.
-  
+
    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
    ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
    WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -131,14 +131,12 @@
    </head>
 
    <body>
-      <p>
-         Notes:
+      <p>Notes:</p>
 
-         <ol>
-            <li>You must have an Internet connection to use this demo, as jQuery is pulled from the jQuery CDN.</li>
-            <li>Depending on your browser's support for specialized input types, you might not see specialized behavior, and might see standard text boxes instead.  The ones featured here are known to work in Firefox 48 and Chrome 52.</li>
-         </ol>
-      </p>
+      <ol>
+         <li>You must have an Internet connection to use this demo, as jQuery is pulled from the jQuery CDN.</li>
+         <li>Depending on your browser's support for specialized input types, you might not see specialized behavior, and might see standard text boxes instead.  The ones featured here are known to work in Firefox 48 and Chrome 52.</li>
+      </ol>
 
       <h3>Example 1 - array notation:  &lt;input type=&quot;text&quot; id=&quot;txt[0]&quot; name=&quot;txt[0]&quot;&gt;</h3>
 
@@ -237,13 +235,8 @@
 
       <h3>Example 7:  Callbacks</h3>
       <p>
-         This example defines a callback that gets triggered when a field is added.
-         The callback then adds a blur callback to watch it for changes.  Try it: 
-         add a field, type a value into it, then click outside the field.
-      </p>
-      <p>
-         This example also defines a callback that gets triggered when a field is
-         removed.  Remove a field and see what happens.
+         This example defines a callback that gets triggered when a field is added,
+         and a callback that gets triggered when a field is removed.
       </p>
       <div id="example7">
          <div class="txtBoxRow">

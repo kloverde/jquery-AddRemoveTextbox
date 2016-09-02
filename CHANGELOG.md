@@ -1,3 +1,9 @@
+## Release 1.2.1 (September 1, 2016)
+
+* Fixed a bug in the validation of the maxFields and startingNumber settings
+* Refinements to demo.html
+
+
 ## Release 1.2 (August 31, 20106)
 
 * Added callbacks for add/remove operations
