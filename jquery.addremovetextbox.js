@@ -1,5 +1,5 @@
 /*
- * AddRemoveTextbox v1.2
+ * AddRemoveTextbox v1.2.1
  * https://www.github.com/kloverde/jquery-AddRemoveTextbox
  *
  * Donations:  https://paypal.me/KurtisLoVerde/5
@@ -58,7 +58,8 @@
 
          // If true, renumber the id and name attributes upon initialization and when a row is removed.
          // Renumbering is based on DOM order, not `id` or `name` values, and starts on the value
-         // specified by `startingNumber`.  This setting is disabled by default because it can break applications.
+         // specified by `startingNumber`.  This setting is disabled by default because it can break
+         // applications.  Be sure that your application can handle changing IDs and names before using this.
          contiguous          : false,
 
          // This setting is used only when 'contiguous' is set to true.
@@ -96,11 +97,11 @@
          if( isNaN(settings.maxFields) ) {
             throwException( errMsg );
          } else {
-            settings.maxField = parseInt( settings.maxField );
-
             if( settings.maxFields < 2 || settings.maxFields % 1 !== 0 ) {
                throwException( errMsg );
             }
+
+            settings.maxFields = parseInt( settings.maxFields );
          }
       }
 
@@ -111,11 +112,11 @@
             if( isNaN(settings.startingNumber) ) {
                throwException( errMsg );
             } else {
-               settings.startingNumber = parseInt( settings.startingNumber );
-
                if( settings.startingNumber < 0 || settings.startingNumber % 1 !== 0 ) {
                   throwException( errMsg );
                }
+
+               settings.startingNumber = parseInt( settings.startingNumber );
             }
          }
       }
