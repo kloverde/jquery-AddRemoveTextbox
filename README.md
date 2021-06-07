@@ -86,8 +86,3 @@ See the included HTML file for more in-depth examples.
 | `startingNumber` | This setting is used only when `contiguous` is set to `true`. | null |
 | `addCallback` | A callback function to execute when a field is added.  See the demo for more information. | null |
 | `removeCallback` | A callback function to execute when a field is removed.  See the demo for more information. | null |
-
-
-## Thanks
-
-Do you like this library?  Want to toss a few bucks my way to say thanks?  I accept donations at https://paypal.me/KurtisLoVerde/5.  Thank you for your support!
